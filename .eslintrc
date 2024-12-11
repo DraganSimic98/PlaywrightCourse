@@ -1,0 +1,15 @@
+//First you should install eslint plugin for playwright
+//comad for isntalation: npm install -D eslint-plugin-playwright
+//Then create .eslintrc file and enter next comand in that file:
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:playwright/playwright-test",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
+  }
