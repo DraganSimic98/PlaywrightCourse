@@ -38,7 +38,7 @@ for(const name of fileName){
     await page.evaluate(() => {
       const selector = document.querySelector('input#upfile_1');
       if (selector) {
-        selector.className = ''
+        selector.className = '';
       }
     })
 

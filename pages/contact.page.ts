@@ -25,14 +25,14 @@ class ContactPage{
     }
 
     async fillTheForm(name: string, email: string, phone: string, message: string){
-        await this.nemaInput.fill(name)
-        await this.emailInput.fill(email)
-        await this.phoneInput.fill(phone)
-        await this.messageTextArea.fill(message)
+        await this.nemaInput.fill(name);
+        await this.emailInput.fill(email);
+        await this.phoneInput.fill(phone);
+        await this.messageTextArea.fill(message);
     }
 
     async clickBtn(){
-        await this.submitbtn.click()
+        await this.submitbtn.click();
     }
 
     randomizeComponent(){
