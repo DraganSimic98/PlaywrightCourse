@@ -27,7 +27,7 @@ test.beforeEach(async ({ page }) => {
     // expect(test.info().errors.length).toBeLessThan(1)
 
     // verify success message
-    await expect(contacPage.successAlert).toHaveText('Thanks for contacting us! We will be in touch with you shortly')
-  })
-
-})
+    await expect(contacPage.successAlert).toHaveText('Thanks for contacting us! We will be in touch with you shortly');
+  
+  });
+});

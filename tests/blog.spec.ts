@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import BlogPage from '../pages/blog.page';
 test.describe('Blog', () => {
   let blogPage: BlogPage;
+  
   test('Verify Recent Posts count and verify the length of each list item', async ({ page }) => {
     blogPage = new BlogPage(page);
     // open blog page
