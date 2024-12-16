@@ -12,19 +12,26 @@ let randomUser: APIResponse;
 
 test.beforeAll(async ({ playwright }) => {
   fakerApi = await playwright.request.newContext({
+    
     baseURL: 'https://jsonplaceholder.typicode.com/'
   });
 
   const response = await fakerApi.get('users');
   const responseBody = await response.json();
-  const randomNumber = function getRandomNumber(min: number, max: number){
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() *( max-min+1))+min
-  }
   randomUser = responseBody[0];
+
+  const postResponse = await fakerApi.post('users/1/todos', {
+    data: {
+      "title": "Learn Playwright",
+      "completed": "false"
+    }
+});
+   const postResponseBody = await postResponse.json();
+   console.log(postResponseBody);
    
 })
+
+
 
 
   test('Fill contact form and verify success message', async ({ page }) => {
